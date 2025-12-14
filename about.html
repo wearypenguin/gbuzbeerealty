@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — G. Buzbee Realty</title>
+  <meta name="description" content="Learn about G. Buzbee Incorporated and Garrett Buzbee, licensed General Contractor serving High Springs, FL." />
+  <link rel="icon" href="images/GBI-favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/core.css" />
+  <link rel="stylesheet" href="css/themes/buzbee.css" />
+  <script defer src="js/theme-toggle.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/back-to-top.js"></script>
+  <style>
+    .about-content {
+      max-width: 70ch;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="container nav">
+    <a href="./index.html" class="brand">
+      <img src="images/Pantone-Orange-GBI-Logo-Clear.png" alt="G. Buzbee Realty logo" />
+      <strong style="color: var(--color-brand); font-size: 1.2em;">G. Buzbee Realty</strong>
+    </a>
+    <nav id="primary-nav" class="primary-nav cluster" aria-label="Primary">
+      <a href="./index.html" class="button secondary">Home</a>
+      <a href="./about.html" class="button secondary" aria-current="page">About</a>
+      <a href="./gallery.html" class="button secondary">Gallery</a>
+      <a href="./blueprints.html" class="button secondary">Blueprints</a>
+      <a href="./contact.html" class="button">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="nav-toggle" class="button secondary" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <button id="theme-toggle" class="button secondary" aria-label="Toggle color theme"></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html">Home</a>
+        <span class="breadcrumb-separator">→</span>
+        <span class="breadcrumb-current">About</span>
+      </nav>
+    </div>
+
+    <section class="section page-header">
+      <div class="container stack">
+        <h1>About G. Buzbee Realty</h1>
+        <p class="hero-sub text-muted-strong">Professional real estate services built on experience and expertise.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-content">
+        <div class="stack">
+          <p style="font-size: var(--text-lg); line-height: 1.7;">
+            G. Buzbee Incorporated is owned and operated by Garrett Buzbee. Garrett holds a degree in Building Construction from the University of Florida and is a licensed General Contractor. Beginning with large commercial construction, Garrett brings extensive experience and professional expertise to every real estate transaction.
+          </p>
+          
+          <div class="callout mt-6">
+            <h2>Our Commitment</h2>
+            <p>Whether you're buying your first home, selling a property, or investing in real estate, we provide personalized service and expert guidance throughout the entire process.</p>
+          </div>
+
+          <div class="grid gap-6 mt-6" style="grid-template-columns: 1fr;">
+            <div class="card stack">
+              <h3>🎓 Education & Licensing</h3>
+              <p>Degree in Building Construction from the University of Florida</p>
+              <p>Licensed General Contractor</p>
+            </div>
+
+            <div class="card stack">
+              <h3>🏗️ Experience</h3>
+              <p>Background in large commercial construction brings unique insights to residential and commercial real estate transactions.</p>
+            </div>
+
+            <div class="card stack">
+              <h3>📍 Local Knowledge</h3>
+              <p>Deep understanding of High Springs, FL and surrounding communities ensures you get the best opportunities in the area.</p>
+            </div>
+          </div>
+
+          <div class="mt-6" style="text-align: center;">
+            <a href="./contact.html" class="button">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <small>© <span id="year"></span> G. Buzbee Realty</small>
+      </div>
+      <div class="footer-center">
+        <small>High Springs, FL 32655</small>
+      </div>
+      <div class="footer-right">
+        <small><a href="mailto:info@gbuzbee.com">info@gbuzbee.com</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

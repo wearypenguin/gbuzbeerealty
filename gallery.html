@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — G. Buzbee Realty</title>
+  <meta name="description" content="Browse our featured property listings and gallery of homes in High Springs, FL." />
+  <link rel="icon" href="images/GBI-favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/core.css" />
+  <link rel="stylesheet" href="css/themes/buzbee.css" />
+  <script defer src="js/theme-toggle.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/back-to-top.js"></script>
+  <style>
+    .property-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    
+    @media (min-width: 640px) {
+      .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 960px) {
+      .property-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .property-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .property-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+      border-radius: var(--radius) var(--radius) 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+    
+    .property-details {
+      padding: var(--space-4);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .property-price {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-brand);
+      margin-bottom: var(--space-2);
+    }
+    
+    .property-address {
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+    }
+    
+    .property-specs {
+      display: flex;
+      gap: var(--space-4);
+      margin-top: var(--space-3);
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+    }
+    
+    .property-spec {
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+    
+    .property-actions {
+      margin-top: auto;
+      padding-top: var(--space-3);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="container nav">
+    <a href="./index.html" class="brand">
+      <img src="images/Pantone-Orange-GBI-Logo-Clear.png" alt="G. Buzbee Realty logo" />
+      <strong style="color: var(--color-brand); font-size: 1.2em;">G. Buzbee Realty</strong>
+    </a>
+    <nav id="primary-nav" class="primary-nav cluster" aria-label="Primary">
+      <a href="./index.html" class="button secondary">Home</a>
+      <a href="./about.html" class="button secondary">About</a>
+      <a href="./gallery.html" class="button secondary" aria-current="page">Gallery</a>
+      <a href="./blueprints.html" class="button secondary">Blueprints</a>
+      <a href="./contact.html" class="button">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="nav-toggle" class="button secondary" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <button id="theme-toggle" class="button secondary" aria-label="Toggle color theme"></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html">Home</a>
+        <span class="breadcrumb-separator">→</span>
+        <span class="breadcrumb-current">Gallery</span>
+      </nav>
+    </div>
+
+    <section class="section page-header">
+      <div class="container stack">
+        <h1>Featured Listings</h1>
+        <p class="hero-sub text-muted-strong">Browse our current selection of properties. Click on any listing to view more details.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="property-grid">
+          
+          <!-- Sample Property 1 - Replace with actual listings -->
+          <div class="card property-card elevate">
+            <div class="property-image">
+              <span>📷 Photo Coming Soon</span>
+            </div>
+            <div class="property-details">
+              <div class="property-price">$XXX,XXX</div>
+              <div class="property-address">Sample Property Address</div>
+              <p>Beautiful home with modern amenities in a great location.</p>
+              <div class="property-specs">
+                <span class="property-spec">🛏️ X BD</span>
+                <span class="property-spec">🛁 X BA</span>
+                <span class="property-spec">📐 X,XXX sqft</span>
+              </div>
+              <div class="property-actions">
+                <a href="./properties/sample-property-1.html" class="button secondary" style="width: 100%;">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Property 2 -->
+          <div class="card property-card elevate">
+            <div class="property-image">
+              <span>📷 Photo Coming Soon</span>
+            </div>
+            <div class="property-details">
+              <div class="property-price">$XXX,XXX</div>
+              <div class="property-address">Sample Property Address</div>
+              <p>Spacious property perfect for families.</p>
+              <div class="property-specs">
+                <span class="property-spec">🛏️ X BD</span>
+                <span class="property-spec">🛁 X BA</span>
+                <span class="property-spec">📐 X,XXX sqft</span>
+              </div>
+              <div class="property-actions">
+                <a href="./properties/sample-property-2.html" class="button secondary" style="width: 100%;">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Property 3 -->
+          <div class="card property-card elevate">
+            <div class="property-image">
+              <span>📷 Photo Coming Soon</span>
+            </div>
+            <div class="property-details">
+              <div class="property-price">$XXX,XXX</div>
+              <div class="property-address">Sample Property Address</div>
+              <p>Charming home in desirable neighborhood.</p>
+              <div class="property-specs">
+                <span class="property-spec">🛏️ X BD</span>
+                <span class="property-spec">🛁 X BA</span>
+                <span class="property-spec">📐 X,XXX sqft</span>
+              </div>
+              <div class="property-actions">
+                <a href="./properties/sample-property-3.html" class="button secondary" style="width: 100%;">View Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="callout mt-6">
+          <h2>Looking for Something Specific?</h2>
+          <p>Can't find what you're looking for? Contact us and we'll help you find your perfect property.</p>
+          <a href="./contact.html" class="button mt-2">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <small>© <span id="year"></span> G. Buzbee Realty</small>
+      </div>
+      <div class="footer-center">
+        <small>High Springs, FL 32655</small>
+      </div>
+      <div class="footer-right">
+        <small><a href="mailto:info@gbuzbee.com">info@gbuzbee.com</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

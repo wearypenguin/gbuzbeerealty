@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blueprints — G. Buzbee Realty</title>
+  <meta name="description" content="View construction blueprints and plans for G. Buzbee Realty properties." />
+  <link rel="icon" href="images/GBI-favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/core.css" />
+  <link rel="stylesheet" href="css/themes/buzbee.css" />
+  <script defer src="js/theme-toggle.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/back-to-top.js"></script>
+  <style>
+    .blueprint-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    
+    @media (min-width: 768px) {
+      .blueprint-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .blueprint-card {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blueprint-preview {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #e8f4f8 0%, #d0e8f0 100%);
+      border-radius: var(--radius) var(--radius) 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+      border: 2px dashed var(--color-border);
+    }
+    
+    .blueprint-info {
+      padding: var(--space-4);
+    }
+    
+    .blueprint-title {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="container nav">
+    <a href="./index.html" class="brand">
+      <img src="images/Pantone-Orange-GBI-Logo-Clear.png" alt="G. Buzbee Realty logo" />
+      <strong style="color: var(--color-brand); font-size: 1.2em;">G. Buzbee Realty</strong>
+    </a>
+    <nav id="primary-nav" class="primary-nav cluster" aria-label="Primary">
+      <a href="./index.html" class="button secondary">Home</a>
+      <a href="./about.html" class="button secondary">About</a>
+      <a href="./gallery.html" class="button secondary">Gallery</a>
+      <a href="./blueprints.html" class="button secondary" aria-current="page">Blueprints</a>
+      <a href="./contact.html" class="button">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="nav-toggle" class="button secondary" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <button id="theme-toggle" class="button secondary" aria-label="Toggle color theme"></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html">Home</a>
+        <span class="breadcrumb-separator">→</span>
+        <span class="breadcrumb-current">Blueprints</span>
+      </nav>
+    </div>
+
+    <section class="section page-header">
+      <div class="container stack">
+        <h1>Construction Blueprints</h1>
+        <p class="hero-sub text-muted-strong">
+          With a background in Building Construction and as a licensed General Contractor, 
+          we provide detailed blueprints and construction plans for our properties.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="callout mb-4">
+          <h2>Professional Construction Expertise</h2>
+          <p>
+            Leveraging years of experience in large commercial construction and a degree from 
+            the University of Florida in Building Construction, G. Buzbee Realty brings 
+            professional-grade planning and execution to every project.
+          </p>
+        </div>
+
+        <div class="blueprint-grid">
+          
+          <!-- Sample Blueprint 1 -->
+          <div class="card blueprint-card elevate">
+            <div class="blueprint-preview">
+              <span>📐 Blueprint Preview</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-title">Sample Floor Plan</div>
+              <p>Detailed construction blueprints for [property name or type].</p>
+              <div class="mt-2">
+                <a href="#" class="button secondary">View Blueprint</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Blueprint 2 -->
+          <div class="card blueprint-card elevate">
+            <div class="blueprint-preview">
+              <span>📐 Blueprint Preview</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-title">Sample Site Plan</div>
+              <p>Property layout and site planning documentation.</p>
+              <div class="mt-2">
+                <a href="#" class="button secondary">View Blueprint</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Blueprint 3 -->
+          <div class="card blueprint-card elevate">
+            <div class="blueprint-preview">
+              <span>📐 Blueprint Preview</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-title">Sample Elevation Plan</div>
+              <p>Architectural elevations and exterior views.</p>
+              <div class="mt-2">
+                <a href="#" class="button secondary">View Blueprint</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Blueprint 4 -->
+          <div class="card blueprint-card elevate">
+            <div class="blueprint-preview">
+              <span>📐 Blueprint Preview</span>
+            </div>
+            <div class="blueprint-info">
+              <div class="blueprint-title">Sample Detail Drawing</div>
+              <p>Construction details and specifications.</p>
+              <div class="mt-2">
+                <a href="#" class="button secondary">View Blueprint</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="callout mt-6">
+          <h2>Need Custom Plans?</h2>
+          <p>
+            Interested in custom construction or modifications to existing plans? 
+            Get in touch to discuss your project needs.
+          </p>
+          <a href="./contact.html" class="button mt-2">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <small>© <span id="year"></span> G. Buzbee Realty</small>
+      </div>
+      <div class="footer-center">
+        <small>High Springs, FL 32655</small>
+      </div>
+      <div class="footer-right">
+        <small><a href="mailto:info@gbuzbee.com">info@gbuzbee.com</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

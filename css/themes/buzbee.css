@@ -1,0 +1,80 @@
+/* G. Buzbee Realty Theme
+   - Custom branding colors: Dark Orange and White
+   - Based on GatorWebsites core standards
+*/
+
+/* Light Mode - Primary Theme */
+:root {
+  /* Base colors - clean and professional */
+  --color-bg: #ffffff;
+  --color-fg: #1a1a1a;
+  --color-muted: #5a5a5a;
+  --color-muted-strong: #3a3a3a;
+
+  /* Brand - Dark Orange (from site) */
+  --color-brand: #b74e28;
+  --color-brand-hover: #a04422;
+  --color-brand-active: #8a3b1d;
+  --color-brand-contrast: #ffffff;
+  --color-accent-orange: #b74e28;
+
+  /* Surfaces & borders */
+  --color-surface: #f9f9f9;
+  --color-border: #e0e0e0;
+  --color-border-hover: #c8c8c8;
+  --color-border-input: #d0d0d0;
+  --nav-current-ring: rgba(183, 78, 40, 0.3);
+
+  /* Buttons */
+  --color-button: #b74e28;
+  --color-button-hover: #a04422;
+  --color-button-active: #8a3b1d;
+  --color-button-contrast: #ffffff;
+
+  /* Hero panel */
+  --color-hero-panel-bg: rgba(255, 255, 255, 0.92);
+  --color-hero-panel-border: rgba(0, 0, 0, 0.08);
+
+  /* Controls */
+  --focus-ring: rgba(183, 78, 40, 0.4);
+  --button-secondary-bg: rgba(183, 78, 40, 0.1);
+  --button-secondary-bg-hover: rgba(183, 78, 40, 0.18);
+  --button-secondary-bg-active: rgba(183, 78, 40, 0.25);
+}
+
+/* Dark Mode - Optional for accessibility */
+[data-theme="dark"] {
+  --color-bg: #1a1a1a;
+  --color-fg: #f0f0f0;
+  --color-muted: #b0b0b0;
+  --color-muted-strong: #d0d0d0;
+
+  --color-brand: #d16b42;
+  --color-brand-hover: #b95a35;
+  --color-brand-active: #a04a29;
+  --color-brand-contrast: #ffffff;
+  --color-accent-orange: #d16b42;
+
+  --color-surface: #252525;
+  --color-border: #404040;
+  --color-border-hover: #555555;
+  --nav-current-ring: rgba(209, 107, 66, 0.4);
+
+  --color-button: #d16b42;
+  --color-button-hover: #b95a35;
+  --color-button-active: #a04a29;
+  --color-button-contrast: #ffffff;
+
+  --color-hero-panel-bg: rgba(26, 26, 26, 0.85);
+  --color-hero-panel-border: rgba(255, 255, 255, 0.1);
+
+  --focus-ring: rgba(209, 107, 66, 0.45);
+  --button-secondary-bg: rgba(209, 107, 66, 0.15);
+  --button-secondary-bg-hover: rgba(209, 107, 66, 0.22);
+  --button-secondary-bg-active: rgba(209, 107, 66, 0.3);
+}
+
+/* Theme-specific adjustments */
+[data-theme="dark"] .hero-sub {
+  color: var(--color-fg);
+}
