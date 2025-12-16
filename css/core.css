@@ -332,10 +332,10 @@ p { margin: 0 0 var(--space-4); color: var(--color-fg); }
 .card .price-badge { display: inline-flex; margin-bottom: var(--space-2); }
 .card-actions { display: block; margin-top: var(--space-2); }
 .button { text-align: center; display: inline-flex; align-items: center; gap: .5rem; padding: 10px 16px; 
-  border-radius: 6px; border: 1px solid transparent; background: var(--color-button, var(--color-brand)); 
+  border-radius: 6px; border: 1px solid var(--color-button-border, transparent); background: var(--color-button, var(--color-brand)); 
   color: var(--color-button-contrast, var(--color-brand-contrast)); font-weight: 600; cursor: pointer; 
   transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .05s ease; }
-.button:hover { background: var(--color-button-hover, var(--color-brand-hover)); color: var(--color-button-contrast, var(--color-brand-contrast)); }
+.button:hover { background: var(--color-button-hover, var(--color-brand-hover)); color: var(--color-button-contrast-hover, var(--color-button-contrast, var(--color-brand-contrast))); border-color: var(--color-button-border, transparent); }
 .button:active { background: var(--color-button-active, var(--color-brand-active)); transform: translateY(1px); }
 .button:focus-visible { outline: 3px solid var(--focus-ring, rgba(43,127,255,.35)); outline-offset: 2px; }
 .button.secondary { background: var(--button-secondary-bg, rgba(43,127,255,.12)); color: var(--color-fg); border-color: var(--color-border); }

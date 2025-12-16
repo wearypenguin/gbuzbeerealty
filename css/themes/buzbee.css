@@ -52,18 +52,20 @@
   --color-brand: #d16b42;
   --color-brand-hover: #b95a35;
   --color-brand-active: #a04a29;
-  --color-brand-contrast: #ffffff;
+  --color-brand-contrast: #000000;
   --color-accent-orange: #d16b42;
 
   --color-surface: #252525;
   --color-border: #404040;
   --color-border-hover: #555555;
+  --color-button-border: #d16b42;
   --nav-current-ring: rgba(209, 107, 66, 0.4);
 
   --color-button: #d16b42;
   --color-button-hover: #b95a35;
   --color-button-active: #a04a29;
-  --color-button-contrast: #ffffff;
+  --color-button-contrast: #000000;
+  --color-button-contrast-hover: #ffffff;
 
   --color-hero-panel-bg: rgba(26, 26, 26, 0.85);
   --color-hero-panel-border: rgba(255, 255, 255, 0.1);
