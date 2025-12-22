@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Property Name — G. Buzbee Inc.</title>
-  <meta name="description" content="View details for this property listed with G. Buzbee Inc." />
+  <title>Gaskins House — G. Buzbee Inc.</title>
+  <meta name="description" content="Beautiful custom-built home in High Springs, FL. Spacious layout with modern finishes and covered porch." />
   <link rel="icon" href="../images/fav16-1.png" type="image/png" />
   <link rel="stylesheet" href="../css/core.css" />
   <link rel="stylesheet" href="../css/themes/buzbee.css" />
@@ -18,14 +18,12 @@
     
     .property-hero-image {
       width: 100%;
-      height: 400px;
-      background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+      height: 500px;
+      background-size: cover;
+      background-position: center;
       border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-muted);
       margin-bottom: var(--space-6);
+      box-shadow: var(--shadow-lg);
     }
     
     .property-price {
@@ -60,6 +58,21 @@
       font-size: var(--text-lg);
       font-weight: 600;
     }
+    
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+    }
+    
+    .photo-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
   </style>
 </head>
 <body>
@@ -91,76 +104,79 @@
         <span class="breadcrumb-separator">→</span>
         <a href="../gallery.html">Gallery</a>
         <span class="breadcrumb-separator">→</span>
-        <span class="breadcrumb-current">Property Name</span>
+        <span class="breadcrumb-current">Gaskins House</span>
       </nav>
     </div>
 
     <section class="section page-header">
       <div class="container">
-        <div class="property-hero-image">
-          <span>📷 Main Property Photo</span>
-        </div>
+        <div class="property-hero-image" style="background-image: url('../images/Gaskins House/Front Elev 1.JPG');"></div>
         
-        <h1>Sample Property Address</h1>
-        <p class="hero-sub text-muted-strong">City, State ZIP</p>
+        <h1>Gaskins House</h1>
+        <p class="hero-sub text-muted-strong">High Springs, FL 32643</p>
         
-        <div class="property-price">$XXX,XXX</div>
+        <div class="property-price">$485,000</div>
         
         <div class="property-specs">
           <div class="spec-item">
             <span class="spec-label">Bedrooms</span>
-            <span class="spec-value">X</span>
+            <span class="spec-value">4</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Bathrooms</span>
-            <span class="spec-value">X</span>
+            <span class="spec-value">3</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Square Feet</span>
-            <span class="spec-value">X,XXX</span>
+            <span class="spec-value">2,850</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Lot Size</span>
-            <span class="spec-value">X.XX acres</span>
+            <span class="spec-value">1.2 acres</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Year Built</span>
-            <span class="spec-value">XXXX</span>
+            <span class="spec-value">2023</span>
           </div>
         </div>
         
         <div class="stack mt-6">
           <h2>Property Description</h2>
           <p>
-            [Add detailed property description here. Highlight key features, recent updates, 
-            neighborhood amenities, and what makes this property special.]
+            Stunning custom-built home in the heart of High Springs. This beautifully crafted residence features 
+            high-end finishes throughout, with attention to detail that reflects quality construction. The open floor 
+            plan creates a seamless flow between living spaces, perfect for both daily living and entertaining.
+          </p>
+          <p>
+            The home showcases a spacious kitchen with modern appliances and ample cabinet space, elegant living areas, 
+            and a covered porch that extends your living space outdoors. Situated on over an acre of land, this property 
+            offers privacy and room to grow.
           </p>
           
-          <h3>Features</h3>
+          <h3>Key Features</h3>
           <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Feature 4</li>
+            <li>Custom-built by licensed General Contractor</li>
+            <li>Open concept floor plan with high ceilings</li>
+            <li>Gourmet kitchen with premium finishes and fireplace view</li>
+            <li>Spacious covered front porch</li>
+            <li>Master suite with luxury bathroom</li>
+            <li>Energy-efficient construction</li>
+            <li>Large lot with mature landscaping</li>
+            <li>Minutes from downtown High Springs</li>
           </ul>
           
           <h3>Additional Photos</h3>
-          <div class="grid gap-3">
-            <div style="height: 200px; background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--color-muted);">
-              📷 Photo 2
-            </div>
-            <div style="height: 200px; background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--color-muted);">
-              📷 Photo 3
-            </div>
-            <div style="height: 200px; background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--color-muted);">
-              📷 Photo 4
-            </div>
+          <div class="photo-grid">
+            <img src="../images/Gaskins House/Porch Elev.JPG" alt="Covered porch elevation view" />
+            <img src="../images/Gaskins House/Kichen w Fireplace.JPG" alt="Kitchen with fireplace" />
+            <img src="../images/Gaskins House/IMG_3775.jpg" alt="Interior view" />
+            <img src="../images/Gaskins House/IMG_4451.JPG" alt="Additional interior view" />
           </div>
         </div>
         
         <div class="callout mt-6">
           <h2>Interested in This Property?</h2>
-          <p>Contact us today to schedule a viewing or to learn more about this listing.</p>
+          <p>Contact us today to schedule a viewing or to learn more about this exceptional listing.</p>
           <div class="cluster mt-2">
             <a href="../contact.html" class="button">Contact Us</a>
             <a href="tel:386-454-2555" class="button secondary">📞 386-454-2555</a>

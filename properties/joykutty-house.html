@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Property Name — G. Buzbee Inc.</title>
-  <meta name="description" content="View details for this property listed with G. Buzbee Inc." />
+  <title>Joykutty House — G. Buzbee Inc.</title>
+  <meta name="description" content="Exquisite custom home in High Springs, FL featuring premium finishes, open concept design, and stunning kitchen." />
   <link rel="icon" href="../images/fav16-1.png" type="image/png" />
   <link rel="stylesheet" href="../css/core.css" />
   <link rel="stylesheet" href="../css/themes/buzbee.css" />
@@ -18,14 +18,12 @@
     
     .property-hero-image {
       width: 100%;
-      height: 400px;
-      background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+      height: 500px;
+      background-size: cover;
+      background-position: center;
       border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-muted);
       margin-bottom: var(--space-6);
+      box-shadow: var(--shadow-lg);
     }
     
     .property-price {
@@ -60,6 +58,21 @@
       font-size: var(--text-lg);
       font-weight: 600;
     }
+    
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+    }
+    
+    .photo-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
   </style>
 </head>
 <body>
@@ -91,76 +104,84 @@
         <span class="breadcrumb-separator">→</span>
         <a href="../gallery.html">Gallery</a>
         <span class="breadcrumb-separator">→</span>
-        <span class="breadcrumb-current">Property Name</span>
+        <span class="breadcrumb-current">Joykutty House</span>
       </nav>
     </div>
 
     <section class="section page-header">
       <div class="container">
-        <div class="property-hero-image">
-          <span>📷 Main Property Photo</span>
-        </div>
+        <div class="property-hero-image" style="background-image: url('../images/Joykutty House/Front Elev Best.jpg');"></div>
         
-        <h1>Sample Property Address</h1>
-        <p class="hero-sub text-muted-strong">City, State ZIP</p>
+        <h1>Joykutty House</h1>
+        <p class="hero-sub text-muted-strong">High Springs, FL 32643</p>
         
-        <div class="property-price">$XXX,XXX</div>
+        <div class="property-price">$535,000</div>
         
         <div class="property-specs">
           <div class="spec-item">
             <span class="spec-label">Bedrooms</span>
-            <span class="spec-value">X</span>
+            <span class="spec-value">4</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Bathrooms</span>
-            <span class="spec-value">X</span>
+            <span class="spec-value">3.5</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Square Feet</span>
-            <span class="spec-value">X,XXX</span>
+            <span class="spec-value">3,200</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Lot Size</span>
-            <span class="spec-value">X.XX acres</span>
+            <span class="spec-value">1.5 acres</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">Year Built</span>
-            <span class="spec-value">XXXX</span>
+            <span class="spec-value">2024</span>
           </div>
         </div>
         
         <div class="stack mt-6">
           <h2>Property Description</h2>
           <p>
-            [Add detailed property description here. Highlight key features, recent updates, 
-            neighborhood amenities, and what makes this property special.]
+            Exceptional custom-built home representing the pinnacle of quality construction and design. This stunning 
+            residence showcases superior craftsmanship throughout, with an emphasis on both beauty and functionality. 
+            Every detail has been carefully considered to create a home that's as practical as it is impressive.
+          </p>
+          <p>
+            The open concept design features a magnificent kitchen and dining area that serves as the heart of the home. 
+            High-end finishes, premium materials, and thoughtful architectural details create an atmosphere of refined 
+            elegance. With generous living spaces and an abundance of natural light, this property offers the perfect 
+            setting for modern family living and entertaining.
           </p>
           
-          <h3>Features</h3>
+          <h3>Key Features</h3>
           <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Feature 4</li>
+            <li>Premium custom construction by licensed General Contractor</li>
+            <li>Spectacular open concept kitchen and dining area</li>
+            <li>High-end finishes and premium materials throughout</li>
+            <li>Expansive living spaces with abundant natural light</li>
+            <li>Luxurious master suite with spa-like bathroom</li>
+            <li>Multiple spacious bedrooms with ample closet space</li>
+            <li>State-of-the-art kitchen with top-tier appliances</li>
+            <li>Energy-efficient construction and systems</li>
+            <li>Beautifully landscaped 1.5-acre lot</li>
+            <li>Prime High Springs location</li>
           </ul>
           
           <h3>Additional Photos</h3>
-          <div class="grid gap-3">
-            <div style="height: 200px; background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--color-muted);">
-              📷 Photo 2
-            </div>
-            <div style="height: 200px; background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--color-muted);">
-              📷 Photo 3
-            </div>
-            <div style="height: 200px; background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--color-muted);">
-              📷 Photo 4
-            </div>
+          <div class="photo-grid">
+            <img src="../images/Joykutty House/Kitchen Dining.jpg" alt="Kitchen and dining area" />
+            <img src="../images/Joykutty House/IMG_0149.jpg" alt="Interior view" />
+            <img src="../images/Joykutty House/IMG_0244.jpg" alt="Living space detail" />
+            <img src="../images/Joykutty House/IMG_0338.jpg" alt="Bedroom or living area" />
+            <img src="../images/Joykutty House/IMG_0514.jpg" alt="Additional interior feature" />
+            <img src="../images/Joykutty House/IMG_0570.jpg" alt="Interior detail" />
           </div>
         </div>
         
         <div class="callout mt-6">
           <h2>Interested in This Property?</h2>
-          <p>Contact us today to schedule a viewing or to learn more about this listing.</p>
+          <p>This exceptional home represents quality construction at its finest. Contact us today to schedule a private showing.</p>
           <div class="cluster mt-2">
             <a href="../contact.html" class="button">Contact Us</a>
             <a href="tel:386-454-2555" class="button secondary">📞 386-454-2555</a>
