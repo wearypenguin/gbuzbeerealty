@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <script>(function(){var t=localStorage.getItem('gw_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kirby Blueprints — G. Buzbee Inc.</title>
+  <meta name="description" content="Complete construction blueprints for Kirby residence including architectural, structural, and MEP plans." />
+  <link rel="icon" href="../images/fav16-1.png" type="image/png" />
+  <link rel="stylesheet" href="../css/core.css" />
+  <link rel="stylesheet" href="../css/themes/buzbee.css" />
+  <script defer src="../js/theme-toggle.js"></script>
+  <script defer src="../js/nav.js"></script>
+  <script defer src="../js/back-to-top.js"></script>
+  <style>
+    .page-header {
+      padding: var(--space-7) 0 var(--space-5);
+    }
+    
+    .blueprint-section {
+      margin-bottom: var(--space-8);
+    }
+    
+    .blueprint-section h2 {
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-2);
+      border-bottom: 3px solid var(--color-brand);
+    }
+    
+    .blueprint-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+      margin-top: var(--space-4);
+    }
+    
+    @media (min-width: 768px) {
+      .blueprint-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .blueprint-item {
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.2s ease;
+    }
+    
+    .blueprint-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .blueprint-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+    
+    .blueprint-caption {
+      padding: var(--space-3);
+      font-size: var(--text-sm);
+      color: var(--color-text);
+      font-weight: 600;
+      text-align: center;
+      background: var(--color-background);
+    }
+    
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+    }
+    
+    .lightbox.active {
+      display: flex;
+    }
+    
+    .lightbox-content {
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      font-size: 2rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="container nav">
+    <a href="../index.html" class="brand">
+      <img src="../images/Pantone-Orange-GBI-Logo-Clear.png" alt="G. Buzbee Inc. logo" />
+      <strong style="color: var(--color-brand); font-size: 1.2em;">G. Buzbee Inc.</strong>
+    </a>
+    <nav id="primary-nav" class="primary-nav cluster" aria-label="Primary">
+      <a href="../index.html" class="button secondary">Home</a>
+      <a href="../about.html" class="button secondary">About</a>
+      <a href="../gallery.html" class="button secondary">Gallery</a>
+      <a href="../blueprints.html" class="button secondary">Blueprints</a>
+      <a href="../contact.html" class="button">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="nav-toggle" class="button secondary" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <button id="theme-toggle" class="button secondary" aria-label="Toggle color theme"></button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">→</span>
+        <a href="../blueprints.html">Blueprints</a>
+        <span class="breadcrumb-separator">→</span>
+        <span class="breadcrumb-current">Kirby Blueprints</span>
+      </nav>
+    </div>
+
+    <section class="section page-header">
+      <div class="container stack">
+        <h1>Kirby Residence Construction Plans</h1>
+        <p class="hero-sub text-muted-strong">
+          Complete construction documentation including architectural, structural, and MEP drawings.
+          Click any image to view full size.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        
+        <!-- Cover Renderings Section -->
+        <div class="blueprint-section">
+          <h2>📋 Cover Renderings</h2>
+          <div class="blueprint-grid">
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/01_cover_sheet.png" alt="Cover sheet" class="blueprint-image" />
+              <div class="blueprint-caption">Cover Sheet</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Section -->
+        <div class="blueprint-section">
+          <h2>🏗️ Architectural Plans</h2>
+          <div class="blueprint-grid">
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/03_floor_plan.png" alt="Floor plan" class="blueprint-image" />
+              <div class="blueprint-caption">Floor Plan</div>
+            </div>
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/06_attic_storage_plan.png" alt="Attic storage plan" class="blueprint-image" />
+              <div class="blueprint-caption">Attic Storage Plan</div>
+            </div>
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/07_elevations_front_rear.png" alt="Front and rear elevations" class="blueprint-image" />
+              <div class="blueprint-caption">Elevations - Front & Rear</div>
+            </div>
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/08_elevations_left_right.png" alt="Left and right elevations" class="blueprint-image" />
+              <div class="blueprint-caption">Elevations - Left & Right</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Structural Section -->
+        <div class="blueprint-section">
+          <h2>🔨 Structural Plans</h2>
+          <div class="blueprint-grid">
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/02_foundation_plan.png" alt="Foundation plan" class="blueprint-image" />
+              <div class="blueprint-caption">Foundation Plan</div>
+            </div>
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/04_framing_plan.png" alt="Framing plan" class="blueprint-image" />
+              <div class="blueprint-caption">Framing Plan</div>
+            </div>
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/09_roof_plan.png" alt="Roof plan" class="blueprint-image" />
+              <div class="blueprint-caption">Roof Plan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MEP Section -->
+        <div class="blueprint-section">
+          <h2>⚡ MEP Plans</h2>
+          <p class="text-muted mb-4">Mechanical, Electrical, and Plumbing</p>
+          <div class="blueprint-grid">
+            <div class="blueprint-item">
+              <img src="../images/Kirby_Blueprints/05_electrical_plan.png" alt="Electrical plan" class="blueprint-image" />
+              <div class="blueprint-caption">Electrical Plan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout mt-6">
+          <h2>Professional Construction Documentation</h2>
+          <p>
+            These blueprints represent professional-grade construction planning with detailed specifications
+            for all aspects of the build. For questions about these plans or custom construction projects,
+            contact us today.
+          </p>
+          <div class="cluster mt-2">
+            <a href="../contact.html" class="button">Contact Us</a>
+            <a href="tel:386-454-2555" class="button secondary">📞 386-454-2555</a>
+            <a href="../blueprints.html" class="button secondary">← Back to Blueprints</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">×</button>
+    <img src="" alt="" class="lightbox-content" />
+  </div>
+
+  <footer class="section">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <small>© <span id="year"></span> G. Buzbee Inc.</small>
+      </div>
+      <div class="footer-center">
+        <small>High Springs, FL 32655</small>
+      </div>
+      <div class="footer-right">
+        <small><a href="mailto:info@gbuzbee.com">info@gbuzbee.com</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-content');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const blueprintImages = document.querySelectorAll('.blueprint-image');
+    
+    blueprintImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+    }
+    
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>

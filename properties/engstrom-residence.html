@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
+  <script>(function(){var t=localStorage.getItem('gw_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engstrom Residence — G. Buzbee Inc.</title>
   <meta name="description" content="Charming property in High Springs, FL with classic design and modern updates." />
@@ -72,6 +73,66 @@
       object-fit: cover;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .photo-grid img:hover {
+      transform: scale(1.02);
+    }
+    
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+    }
+    
+    .lightbox.active {
+      display: flex;
+    }
+    
+    .lightbox-content {
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      font-size: 2rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      z-index: 1001;
+    }
+    
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Portrait/Landscape aspect ratios */
+    .photo-grid.portrait img {
+      height: 350px;
+    }
+    
+    .photo-grid.landscape img {
+      height: 200px;
     }
   </style>
 </head>
@@ -166,10 +227,10 @@
           </ul>
           
           <h3>Additional Photos</h3>
-          <div class="photo-grid">
-            <img src="../images/House1/Engstrom.jpg" alt="Exterior view" />
-            <img src="../images/House1/3.jpg" alt="Interior detail" />
-            <img src="../images/House1/IMG_9839.JPG" alt="Interior living space" />
+          <div class="photo-grid" id="photoGrid">
+            <img src="../images/House1/Engstrom.jpg" alt="Front exterior view with landscaping and architectural details" tabindex="0" />
+            <img src="../images/House1/3.jpg" alt="Stone fireplace with wooden mantel in living room" tabindex="0" />
+            <img src="../images/House1/IMG_9839.JPG" alt="Living area with comfortable layout and natural light" tabindex="0" />
           </div>
         </div>
         
@@ -200,8 +261,84 @@
     </div>
   </footer>
 
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImage" class="lightbox-content" src="" alt="" />
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Lightbox functionality
+    function openLightbox(src, alt) {
+      document.getElementById('lightbox').classList.add('active');
+      document.getElementById('lightboxImage').src = src;
+      document.getElementById('lightboxImage').alt = alt;
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Close lightbox on background click
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+    
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+    
+    // Add click handlers to all images in photo grid and detect orientation
+    const photoGrid = document.getElementById('photoGrid');
+    const images = photoGrid.querySelectorAll('img');
+    let portraitCount = 0;
+    let landscapeCount = 0;
+    
+    images.forEach(img => {
+      img.addEventListener('click', function() {
+        openLightbox(this.src, this.alt);
+      });
+      
+      // Add keyboard support for Enter key
+      img.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(this.src, this.alt);
+        }
+      });
+      
+      // Detect orientation after image loads
+      img.addEventListener('load', function() {
+        if (this.naturalHeight > this.naturalWidth) {
+          portraitCount++;
+        } else {
+          landscapeCount++;
+        }
+        
+        // After all images loaded, set grid class based on majority
+        if (portraitCount + landscapeCount === images.length) {
+          if (portraitCount > landscapeCount) {
+            photoGrid.classList.add('portrait');
+          } else {
+            photoGrid.classList.add('landscape');
+          }
+        }
+      });
+      
+      // Trigger for cached images
+      if (img.complete) {
+        img.dispatchEvent(new Event('load'));
+      }
+    });
   </script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
+  <script>(function(){var t=localStorage.getItem('gw_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blueprints — G. Buzbee Inc.</title>
   <meta name="description" content="View construction blueprints and plans for G. Buzbee Inc. properties." />
@@ -40,6 +41,15 @@
       color: var(--color-muted);
       font-size: var(--text-sm);
       border: 2px dashed var(--color-border);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      overflow: hidden;
+    }
+    
+    .blueprint-card a:hover .blueprint-preview,
+    .blueprint-card a:focus .blueprint-preview {
+      border-color: var(--color-brand);
+      border-style: solid;
+      transform: scale(1.03);
     }
     
     .blueprint-info {
@@ -107,24 +117,26 @@
 
         <div class="blueprint-grid">
           
-          <!-- Sample Blueprint 1 -->
+          <!-- Kirby Residence Blueprints -->
           <div class="card blueprint-card elevate">
-            <div class="blueprint-preview">
-              <span>📐 Blueprint Preview</span>
-            </div>
+            <a href="blueprints/kirby-blueprints.html" style="display: block; text-decoration: none; color: inherit;">
+              <div class="blueprint-preview" 
+              style="background-image: url('images/Kirby_Blueprints/01_cover_sheet.png'); 
+              background-size: cover; background-position: center;">            
+              </div>
+            </a>
             <div class="blueprint-info">
-              <div class="blueprint-title">Sample Floor Plan</div>
-              <p>Detailed construction blueprints for [property name or type].</p>
+              <div class="blueprint-title">Kirby Residence</div>
+              <p>Complete construction documentation including architectural, structural, and MEP plans.</p>
               <div class="mt-2">
-                <a href="#" class="button secondary">View Blueprint</a>
+                <a href="blueprints/kirby-blueprints.html" class="button secondary">View Blueprints</a>
               </div>
             </div>
           </div>
 
           <!-- Sample Blueprint 2 -->
-          <div class="card blueprint-card elevate">
+          <!--div class="card blueprint-card elevate">
             <div class="blueprint-preview">
-              <span>📐 Blueprint Preview</span>
             </div>
             <div class="blueprint-info">
               <div class="blueprint-title">Sample Site Plan</div>
@@ -133,35 +145,7 @@
                 <a href="#" class="button secondary">View Blueprint</a>
               </div>
             </div>
-          </div>
-
-          <!-- Sample Blueprint 3 -->
-          <div class="card blueprint-card elevate">
-            <div class="blueprint-preview">
-              <span>📐 Blueprint Preview</span>
-            </div>
-            <div class="blueprint-info">
-              <div class="blueprint-title">Sample Elevation Plan</div>
-              <p>Architectural elevations and exterior views.</p>
-              <div class="mt-2">
-                <a href="#" class="button secondary">View Blueprint</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sample Blueprint 4 -->
-          <div class="card blueprint-card elevate">
-            <div class="blueprint-preview">
-              <span>📐 Blueprint Preview</span>
-            </div>
-            <div class="blueprint-info">
-              <div class="blueprint-title">Sample Detail Drawing</div>
-              <p>Construction details and specifications.</p>
-              <div class="mt-2">
-                <a href="#" class="button secondary">View Blueprint</a>
-              </div>
-            </div>
-          </div>
+          </div-->
 
         </div>
 

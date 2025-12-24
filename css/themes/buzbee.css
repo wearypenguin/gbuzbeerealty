@@ -50,8 +50,8 @@
   --color-muted-strong: #d0d0d0;
 
   --color-brand: #d16b42;
-  --color-brand-hover: #b95a35;
-  --color-brand-active: #a04a29;
+  --color-brand-hover: #d16b42;
+  --color-brand-active: #d16b42;
   --color-brand-contrast: #000000;
   --color-accent-orange: #d16b42;
 
@@ -79,4 +79,8 @@
 /* Theme-specific adjustments */
 [data-theme="dark"] .hero-sub {
   color: var(--color-fg);
+}
+
+[data-theme="dark"] .brand img {
+  content: url("../../images/Pantone-Orange-GBI-Logo-Clear2.png");
 }

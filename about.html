@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
+  <script>(function(){var t=localStorage.getItem('gw_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us — G. Buzbee Inc.</title>
   <meta name="description" content="Learn about G. Buzbee Incorporated and Garrett Buzbee, licensed General Contractor serving High Springs, FL." />
@@ -11,12 +12,6 @@
   <script defer src="js/theme-toggle.js"></script>
   <script defer src="js/nav.js"></script>
   <script defer src="js/back-to-top.js"></script>
-  <style>
-    .about-content {
-      max-width: 70ch;
-      margin: 0 auto;
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -50,54 +45,62 @@
     </div>
 
     <section class="section page-header">
-      <div class="container stack">
+      <div class="container">
         <h1>About G. Buzbee Inc.</h1>
         <p class="hero-sub text-muted-strong">Professional real estate services built on experience and expertise.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container about-content">
-        <div class="stack">
-          <p style="font-size: var(--text-lg); line-height: 1.7;">
-            G. Buzbee Incorporated is owned and operated by Garrett Buzbee. Garrett holds a degree in Building Construction from the University of Florida and is a licensed General Contractor. Beginning with large commercial construction, Garrett brings extensive experience and professional expertise to every real estate transaction.
-          </p>
+      <div class="container">
+        <p style="font-size: var(--text-lg); line-height: 1.7; max-width: 80ch; margin: 0 auto var(--space-6);">
+          G. Buzbee Incorporated is owned and operated by Garrett Buzbee. Garrett holds a degree in Building Construction from the University of Florida and is a licensed General Contractor. Beginning with large commercial construction, Garrett brings extensive experience and professional expertise to every real estate transaction.
+        </p>
+        
+        <div class="grid">
+          <div class="card stack">
+            <h3>🎓 Education & Licensing</h3>
+            <p>Degree in Building Construction from the University of Florida. Licensed General Contractor with comprehensive training in construction management and building systems.</p>
+          </div>
+
+          <div class="card stack">
+            <h3>🏗️ Experience</h3>
+            <p>Background in large commercial construction brings unique insights to residential and commercial real estate transactions.</p>
+          </div>
+
+          <div class="card stack">
+            <h3>📍 Local Knowledge</h3>
+            <p>Deep understanding of High Springs, FL and surrounding communities ensures you get the best opportunities in the area.</p>
+          </div>
           
-          <div class="grid gap-4 mt-6" style="grid-template-columns: 1fr; gap: var(--space-4);">
-            <div class="card stack">
-              <h3>Our Commitment</h3>
-              <p>Whether you're buying your first home, selling a property, or investing in real estate, we provide personalized service and expert guidance throughout the entire process.</p>
-            </div>
+          <div class="card stack">
+            <h3>Professional Service</h3>
+            <p>Dedicated to providing transparent, trustworthy guidance through every step of your real estate journey.</p>
           </div>
 
-          <div class="grid gap-4 mt-6" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4);">
-            <div class="card stack">
-              <h3>🎓 Education & Licensing</h3>
-              <p>Degree in Building Construction from the University of Florida. Licensed General Contractor with comprehensive training in construction management and building systems.</p>
-            </div>
-
-            <div class="card stack">
-              <h3>🏗️ Experience</h3>
-              <p>Background in large commercial construction brings unique insights to residential and commercial real estate transactions.</p>
-            </div>
-
-            <div class="card stack">
-              <h3>📍 Local Knowledge</h3>
-              <p>Deep understanding of High Springs, FL and surrounding communities ensures you get the best opportunities in the area.</p>
-            </div>
-            
-            <div class="card stack">
-              <h3>💼 Professional Service</h3>
-              <p>Dedicated to providing transparent, trustworthy guidance through every step of your real estate journey.</p>
-            </div>
+          <div class="callout" style="width:206%">
+          <h2>Our Commitment</h2>
+          <p>Whether you're buying your first home, selling a property, or investing in real estate, we provide personalized service and expert guidance throughout the entire process.</p>
+          <div class="mt-2">
+            <a href="./contact.html" class="button">Get In Touch</a>
+          </div>
           </div>
 
-          <div class="mt-6" style="text-align: center;">
+        </div>      
+      </div>
+    </section>
+
+    <!--section class="section">
+      <div class="container">
+        <div class="callout">
+          <h2>Our Commitment</h2>
+          <p>Whether you're buying your first home, selling a property, or investing in real estate, we provide personalized service and expert guidance throughout the entire process.</p>
+          <div class="mt-2">
             <a href="./contact.html" class="button">Get In Touch</a>
           </div>
         </div>
       </div>
-    </section>
+    </section-->
   </main>
 
   <footer class="section">
