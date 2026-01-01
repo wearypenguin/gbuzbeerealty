@@ -49,14 +49,13 @@
       font-size: var(--text-sm);
       background-size: cover;
       background-position: center;
-      transition: transform 0.2s ease, border 0.2s ease;
-      border: 3px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       overflow: hidden;
     }
     
     .property-card a:hover .property-image,
     .property-card a:focus .property-image {
-      border-color: var(--color-brand);
+      box-shadow: 0 0 0 3px var(--color-brand);
       transform: scale(1.03);
     }
     
@@ -233,4 +232,3 @@
   </script>
 </body>
 </html>
-
