@@ -29,8 +29,10 @@
 		function renderLabel(theme) {
 			var isDark = theme === 'dark';
 			var emoji = isDark ? '🌙' : '☀️';
+			var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
 			// Emoji-only label per request; keep accessible name via aria-label
 			btn.textContent = emoji;
+			btn.setAttribute('aria-label', label);
 			btn.setAttribute('aria-pressed', String(isDark));
 		}
 		// initial label
